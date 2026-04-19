@@ -1,17 +1,16 @@
 
 
-
 const galleries = {
   asteroidsPlus: import.meta.glob(
-    "./assets/AsteroidsPlus*.{png,jpg,jpeg,mp4}",
+    "./assets/AsteroidsPlus/*.{png,jpg,jpeg,mp4}",
     { eager: true }
   ),
   cardEditor: import.meta.glob(
-    "./assets/CardEditor*.{png,jpg,jpeg,mp4}",
+    "./assets/CardEditor/*.{png,jpg,jpeg,mp4}",
     { eager: true }
   ),
   GMKY: import.meta.glob(
-    "./assets/TheGmIsTryingToKillYou*.{png,jpg,jpeg,mp4}",
+    "./assets/TheGmIsTryingToKillYou/*.{png,jpg,jpeg,mp4}",
     { eager: true }
   ),
 }
