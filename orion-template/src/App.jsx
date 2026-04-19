@@ -1,120 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+//import { useState } from 'react'
+import { IMAGES, VIDEOS} from './index.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  //const [count, setCount] = useState(0)
+  console.log(VIDEOS.AP)
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started I Suppose</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+  <title>Orion Rand Portfolio</title>
+  <section className="text-center">
+    <h1 className="text-4xl font-bold m-6">Orion Rand Portfolio</h1>
+    <p>Game Developer that wants to improve in everything.</p>
+  </section>
+  <div className="bg-white shadow rounded-xl m-10">
+    <h3 className="text-xl font-bold">Asteroids recreation &amp; expansion</h3>
+    <p className="text-gray-600 mt-2">
+      A recreation of Asteroids in Godot Game Engine. This project focused on
+      smooth ship movemnt, dynamic asteroid spawning, and reaching a finished
+      project.
+    </p>
+    <video controls className="block mx-auto max-w-lg w-full mt-8" src={VIDEOS.AP} />
+    <h3 className="text-xl font-bold">D&amp;D Inspired Card Combat Game</h3>
+    <p className="text-gray-600 mt-2">
+      A board game reimagining D&amp;D combat as a card game. This project
+      focused on interesting card mechanics, emphasizing cooperation and
+      teamwork, finding ways to improve through playtesting, and developing
+      abilities in 3d modeling.
+    </p>
+    <img src={IMAGES.BG1} className="block mx-auto max-w-2xl w-full mt-8" />
+    <img src={IMAGES.BG2} className="block mx-auto max-w-2xl w-full mt-8" />
+    <h3 className="text-xl font-bold">Card Creator App</h3>
+    <p className="text-gray-600 mt-2">
+      A mobile app to create cards for faster playtesting. This project focused
+      on data management, user experience, and intuative controls.
+    </p>
+    <img src= {IMAGES.CE1} className="block mx-auto max-w-sm w-full mt-8" />
+    <img src= {IMAGES.CE2} className="block mx-auto max-w-sm w-full mt-8" />
+  </div>
+  </>
   )
 }
 
