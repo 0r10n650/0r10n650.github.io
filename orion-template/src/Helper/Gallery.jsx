@@ -1,4 +1,4 @@
-import { getGallery } from "./galleryLoader"
+import { getGallery } from "./GalleryLoader"
 
 export default function Gallery({ name }) {
     const items = getGallery(name)
