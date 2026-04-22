@@ -1,6 +1,7 @@
 export const PROJECTS = {
     asteroids: {
     title: "Asteroids recreation & expansion",
+    shortDescription:"none",
     description:
       "Full detailed description here...",
     gallery: "asteroidsPlus",
