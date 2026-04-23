@@ -5,10 +5,11 @@ export default function Project({ project }) {
     const data = PROJECTS[project]
 
     return (
-        <div class="rounded-lg bg-red-700 p-4">
-            <h3 className="text-xl font-bold text-white">{data.title} </h3>
+        <div class="rounded-lg p-4">
+            <div className="flex justify-between">
                 <p className="text-gray-600 mt-2 text-zinc-300">{data.description}</p>
-            <Gallery name={data.gallery} />
+                <Gallery name={data.gallery} />
+            </div>
         </div>
     )
 }

@@ -22,9 +22,11 @@ export function getGallery(name) {
   return Object.entries(files).map(([path, mod]) => {
     const isVideo = path.endsWith(".mp4")
 
+    const fileName = path.split("/").pop(); // get file name
     return {
       src: mod.default,
       type: isVideo ? "video" : "image",
+      key: fileName.startsWith("key_"),
     }
   })
 }

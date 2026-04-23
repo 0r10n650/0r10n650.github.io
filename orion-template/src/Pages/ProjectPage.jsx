@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import Sidebar from "../Helper/Sidebar.jsx"
 import Gallery from "../Helper/Gallery.jsx"
 import { PROJECTS } from "../Data/ProjectData.jsx"
+import Project from "../Helper/Project.jsx"
 
 export default function ProjectPage() {
   const { id } = useParams()
@@ -12,19 +13,16 @@ export default function ProjectPage() {
   }
 
   return (
-    <div className="flex">
+    <div className="flex h-screen overflow-hidden">
       <Sidebar />
-
-      <div className="flex-1 p-6">
-        <h1 className="text-3xl font-bold">{project.title}</h1>
-
-        <p className="mt-4 text-gray-600">
-          {project.description}
-        </p>
-
-        {/* Bigger, more detailed gallery */}
-        <div className="mt-6">
-          <Gallery name={project.gallery} />
+      <div>
+        <div className="sticky top-0 bg-stone-900 text-white p-6 z-10">
+            <h1 className="text-5xl font-bold w-lvw">
+                {project.title ?? "Portfolio"}
+            </h1>
+        </div>
+        <div className="flex-1 p-6 bg-stone-700 h-full overflow-y-auto">
+          <Project project={id}/>
         </div>
       </div>
     </div>
