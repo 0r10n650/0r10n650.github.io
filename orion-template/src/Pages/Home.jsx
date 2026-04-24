@@ -2,10 +2,11 @@ import MiniProject from '../Helper/miniProject.jsx';
 import Sidebar from '../Helper/Sidebar.jsx';
 import {PROJECTS} from '../Data/ProjectData.jsx'
 import {useActiveSection} from "../Helper/observer.jsx"
+import { getSortedProjects } from '../Helper/Sorter.jsx';
 
 export default function Home(){
     const {active, containerRef} = useActiveSection("asteroids");
-
+    
     return (
         <>
             <div className='flex h-screen overflow-hidden bg-stone-700'>
@@ -17,7 +18,7 @@ export default function Home(){
                         </h1>
                     </div>
                     <div ref={containerRef} className='flex-1 overflow-y-auto p-6 space-y-4'>
-                         {Object.entries(PROJECTS).map(([key]) => (
+                         {getSortedProjects(PROJECTS).map(([key]) => (
                         <div key={key} data-id={key}>
                             <MiniProject project={key} />
                         </div>

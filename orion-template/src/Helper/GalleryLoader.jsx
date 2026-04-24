@@ -12,6 +12,22 @@ const galleries = {
     "../assets/TheGmIsTryingToKillYou/*.{png,jpg,jpeg,mp4}",
     { eager: true }
   ),
+  ITLS: import.meta.glob(
+    "../assets/ITLS/*.{png,jpg,jpeg,mp4}",
+    { eager: true }
+  ),
+  nuclearEnergy: import.meta.glob(
+    "../assets/NuclearEnergy/*.{png,jpg,jpeg,mp4}",
+    { eager: true }
+  ),
+  sisyphus: import.meta.glob(
+    "../assets/Sisyphus/*.{png,jpg,jpeg,mp4}",
+    { eager: true }
+  ),
+  vbAnimation: import.meta.glob(
+    "../assets/ArtFinal/*.{png,jpg,jpeg,mp4}",
+    { eager: true }
+  ),
 }
 
 export function getGallery(name) {

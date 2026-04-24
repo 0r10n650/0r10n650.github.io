@@ -8,22 +8,26 @@ export default function Gallery({ name, preview = false }) {
         : items;      
       
     return (
-    <div className="flex flex-col gap-6">
-      {displayItems.map((item, i) =>
-        item.type === "image" ? (
-          <img 
-            key={i} 
-            src={item.src} 
-            className="max-w-xl mx-auto max-h-[500px]" />
-        ) : (
-          <video
-            key={i}
-            src={item.src}
-            controls
-            className="max-w-xl mx-auto"
-          />
-        )
-      )}
+      
+    <div className="flex flex-wrap gap-4">
+      {displayItems.map((item, i) => (
+        <div>
+          {item.type === "image" ? (
+            <img 
+              key={i} 
+              src={item.src} 
+              className="max-w-[500px] max-h-[500px] w-auto h-auto"
+              />
+          ) : (
+            <video
+              key={i}
+              src={item.src}
+              controls
+              className="max-w-[500px] max-h-[500px] w-auto h-auto"
+            />
+          )}
+        </div>
+      ))}
     </div>
   )
 }

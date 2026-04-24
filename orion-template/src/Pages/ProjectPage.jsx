@@ -15,13 +15,13 @@ export default function ProjectPage() {
   return (
     <div className="flex h-screen overflow-hidden">
       <Sidebar />
-      <div>
-        <div className="sticky top-0 bg-stone-900 text-white p-6 z-10">
-            <h1 className="text-5xl font-bold w-lvw">
-                {project.title ?? "Portfolio"}
+      <div className="flex-1 flex flex-col">
+        <div className="sticky top-0 bg-slate-900 text-white p-6 z-10">
+            <h1 className="text-5xl font-bold ">
+                {project.realTitle ?? "Portfolio"}
             </h1>
         </div>
-        <div className="flex-1 p-6 bg-stone-700 h-full overflow-y-auto">
+        <div className="p-6 bg-stone-700 h-full overflow-y-auto">
           <Project project={id}/>
         </div>
       </div>
